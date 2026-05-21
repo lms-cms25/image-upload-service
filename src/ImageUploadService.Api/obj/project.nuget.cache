@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "GlKyjH4wwaQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\noels\\Projects\\image-upload-service\\src\\ImageUploadService.Api\\ImageUploadService.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\noels\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.8\\microsoft.aspnetcore.openapi.10.0.8.nupkg.sha512",
+    "C:\\Users\\noels\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
