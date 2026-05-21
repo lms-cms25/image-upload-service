@@ -1,5 +1,8 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/ImageUploadService.Api/ImageUploadService.Api.csproj" />
+    <Project Path="src/ImageUploadService.Application/ImageUploadService.Application.csproj" />
+    <Project Path="src/ImageUploadService.Domain/ImageUploadService.Domain.csproj" />
+    <Project Path="src/ImageUploadService.Infrastructure/ImageUploadService.Infrastructure.csproj" />
   </Folder>
 </Solution>
