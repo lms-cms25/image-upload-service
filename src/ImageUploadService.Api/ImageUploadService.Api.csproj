@@ -8,10 +8,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.8" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.7" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ImageUploadService.Application\ImageUploadService.Application.csproj" />
+    <ProjectReference Include="..\ImageUploadService.Infrastructure\ImageUploadService.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
