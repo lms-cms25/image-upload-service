@@ -11,4 +11,6 @@ public class Image
     public string Url { get; set; } = string.Empty;
     public string FileName { get; set; } = string.Empty;
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+    public bool IsProfileImage { get; set; } = false;
 }

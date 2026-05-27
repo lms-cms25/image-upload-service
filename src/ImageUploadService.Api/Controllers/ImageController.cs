@@ -15,16 +15,23 @@ public class ImagesController : ControllerBase
     }
 
     [HttpPost("upload")]
-    public async Task<IActionResult> Upload(IFormFile file, string userId)
+    public async Task<IActionResult> Upload(IFormFile file, string userId, bool isProfileImage = false)
     {
-        var result = await _service.UploadAsync(file, userId);
+        var result = await _service.UploadAsync(file, userId, isProfileImage);
         return Ok(result);
     }
 
-    [HttpGet("{userId}")]
-    public async Task<IActionResult> GetByUser(string userId)
+    [HttpGet("profile/{userId}")]
+    public async Task<IActionResult> GetProfileImage(string userId)
     {
         var images = await _service.GetByUserIdAsync(userId);
-        return Ok(images);
+
+        var profileImage = images
+            .FirstOrDefault(x => x.IsProfileImage);
+
+        if (profileImage == null)
+            return NotFound();
+
+        return Ok(profileImage);
     }
 }

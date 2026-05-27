@@ -15,7 +15,7 @@ public class ImageService
         _repo = repo;
     }
 
-    public async Task<Image> UploadAsync(IFormFile file, string userId)
+    public async Task<Image> UploadAsync(IFormFile file, string userId, bool isProfileImage)
     {
         if (file == null || file.Length == 0)
             throw new Exception("Invalid file");
@@ -27,8 +27,22 @@ public class ImageService
             UserId = userId,
             Url = url,
             FileName = file.FileName,
+            IsProfileImage = isProfileImage,
             CreatedAt = DateTime.UtcNow
         };
+
+        // Om detta är profile image, ta bort den gamla profile imagen.
+        if (isProfileImage)
+        {
+            var existing = await _repo.GetByUserIdAsync(userId);
+
+            var oldProfile = existing.FirstOrDefault(x => x.IsProfileImage);
+
+            if (oldProfile != null)
+            {
+                oldProfile.IsProfileImage = false;
+            }
+        }
 
         await _repo.AddAsync(image);
 
