@@ -15,40 +15,43 @@ public class ImageService
         _repo = repo;
     }
 
+    // UPLOAD NORMAL IMAGE
     public async Task<Image> UploadAsync(IFormFile file, string userId, bool isProfileImage)
     {
         if (file == null || file.Length == 0)
             throw new Exception("Invalid file");
 
-        var url = await _blob.UploadAsync(file);
+        var uploaded = await _blob.UploadAsync(file, userId);
 
-        var image = new Image
-        {
-            UserId = userId,
-            Url = url,
-            FileName = file.FileName,
-            IsProfileImage = isProfileImage,
-            CreatedAt = DateTime.UtcNow
-        };
+        uploaded.IsProfileImage = isProfileImage;
 
-        // Om detta är profile image, ta bort den gamla profile imagen.
-        if (isProfileImage)
-        {
-            var existing = await _repo.GetByUserIdAsync(userId);
+        await _repo.AddAsync(uploaded);
 
-            var oldProfile = existing.FirstOrDefault(x => x.IsProfileImage);
-
-            if (oldProfile != null)
-            {
-                oldProfile.IsProfileImage = false;
-            }
-        }
-
-        await _repo.AddAsync(image);
-
-        return image;
+        return uploaded;
     }
 
+    // REPLACE PROFILE IMAGE
+    public async Task<Image> ReplaceProfileImageAsync(IFormFile file, string userId)
+    {
+        var existing = await _repo.GetByUserIdAsync(userId);
+
+        var oldProfile = existing.FirstOrDefault(x => x.IsProfileImage);
+
+        if (oldProfile != null)
+        {
+            await _blob.DeleteAsync(oldProfile.FileName);
+            await _repo.DeleteAsync(oldProfile.Id);
+        }
+
+        var newImage = await _blob.UploadAsync(file, userId);
+        newImage.IsProfileImage = true;
+
+        await _repo.AddAsync(newImage);
+
+        return newImage;
+    }
+
+    // GET USER IMAGES
     public async Task<List<Image>> GetByUserIdAsync(string userId)
     {
         return await _repo.GetByUserIdAsync(userId);

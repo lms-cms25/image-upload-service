@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ImageUploadService.Infrastructure.Migrations
 {
     [DbContext(typeof(ImageDbContext))]
-    [Migration("20260527181529_InitialCreate")]
+    [Migration("20260527190956_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -36,6 +36,11 @@ namespace ImageUploadService.Infrastructure.Migrations
                     b.Property<string>("FileName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsProfileImage")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Url")
                         .IsRequired()

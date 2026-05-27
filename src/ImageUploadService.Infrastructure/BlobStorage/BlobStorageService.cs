@@ -1,5 +1,6 @@
 ﻿using Azure.Storage.Blobs;
 using ImageUploadService.Application.Interfaces;
+using ImageUploadService.Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 
@@ -18,7 +19,7 @@ public class BlobStorageService : IBlobStorageService
         _container.CreateIfNotExists();
     }
 
-    public async Task<string> UploadAsync(IFormFile file)
+    public async Task<Image> UploadAsync(IFormFile file, string userId)
     {
         var fileName = Guid.NewGuid() + Path.GetExtension(file.FileName);
 
@@ -27,6 +28,19 @@ public class BlobStorageService : IBlobStorageService
         using var stream = file.OpenReadStream();
         await blob.UploadAsync(stream, overwrite: true);
 
-        return blob.Uri.ToString();
+        return new Image
+        {
+            UserId = userId,
+            Url = blob.Uri.ToString(),
+            FileName = fileName,
+            IsProfileImage = false,
+            CreatedAt = DateTime.UtcNow
+        };
+    }
+
+    public async Task DeleteAsync(string fileName)
+    {
+        var blob = _container.GetBlobClient(fileName);
+        await blob.DeleteIfExistsAsync();
     }
 }

@@ -21,17 +21,17 @@ public class ImagesController : ControllerBase
         return Ok(result);
     }
 
-    [HttpGet("profile/{userId}")]
-    public async Task<IActionResult> GetProfileImage(string userId)
+    [HttpPost("replace-profile")]
+    public async Task<IActionResult> ReplaceProfile(IFormFile file, string userId)
     {
-        var images = await _service.GetByUserIdAsync(userId);
+        var result = await _service.ReplaceProfileImageAsync(file, userId);
+        return Ok(result);
+    }
 
-        var profileImage = images
-            .FirstOrDefault(x => x.IsProfileImage);
-
-        if (profileImage == null)
-            return NotFound();
-
-        return Ok(profileImage);
+    [HttpGet("{userId}")]
+    public async Task<IActionResult> Get(string userId)
+    {
+        var result = await _service.GetByUserIdAsync(userId);
+        return Ok(result);
     }
 }
