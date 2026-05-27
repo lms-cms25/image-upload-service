@@ -1,0 +1,16 @@
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Application\bin\Debug\net10.0\ImageUploadService.Application.deps.json
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Application\bin\Debug\net10.0\ImageUploadService.Application.dll
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Application\bin\Debug\net10.0\ImageUploadService.Application.pdb
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Application\bin\Debug\net10.0\ImageUploadService.Domain.dll
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Application\bin\Debug\net10.0\ImageUploadService.Domain.pdb
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Application\obj\Debug\net10.0\ImageUploadService.Application.csproj.AssemblyReference.cache
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Application\obj\Debug\net10.0\ImageUploadService.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Application\obj\Debug\net10.0\ImageUploadService.Application.AssemblyInfoInputs.cache
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Application\obj\Debug\net10.0\ImageUploadService.Application.AssemblyInfo.cs
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Application\obj\Debug\net10.0\ImageUploadService.Application.csproj.CoreCompileInputs.cache
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Application\obj\Debug\net10.0\ImageUploadService.Application.sourcelink.json
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Application\obj\Debug\net10.0\ImageUpl.F0179134.Up2Date
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Application\obj\Debug\net10.0\ImageUploadService.Application.dll
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Application\obj\Debug\net10.0\refint\ImageUploadService.Application.dll
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Application\obj\Debug\net10.0\ImageUploadService.Application.pdb
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Application\obj\Debug\net10.0\ref\ImageUploadService.Application.dll

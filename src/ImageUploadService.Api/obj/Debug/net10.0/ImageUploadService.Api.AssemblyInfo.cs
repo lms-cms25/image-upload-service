@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ImageUploadService.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+affb61c5e42335e58bb3bf73903fb839a28c77e9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92b8ebee4feb1f4dcedd4914acb3c7f601cd6d5f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ImageUploadService.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ImageUploadService.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

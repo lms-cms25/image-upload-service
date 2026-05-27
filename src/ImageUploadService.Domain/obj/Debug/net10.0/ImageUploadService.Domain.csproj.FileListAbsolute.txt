@@ -1,0 +1,12 @@
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Domain\bin\Debug\net10.0\ImageUploadService.Domain.deps.json
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Domain\bin\Debug\net10.0\ImageUploadService.Domain.dll
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Domain\bin\Debug\net10.0\ImageUploadService.Domain.pdb
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Domain\obj\Debug\net10.0\ImageUploadService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Domain\obj\Debug\net10.0\ImageUploadService.Domain.AssemblyInfoInputs.cache
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Domain\obj\Debug\net10.0\ImageUploadService.Domain.AssemblyInfo.cs
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Domain\obj\Debug\net10.0\ImageUploadService.Domain.csproj.CoreCompileInputs.cache
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Domain\obj\Debug\net10.0\ImageUploadService.Domain.sourcelink.json
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Domain\obj\Debug\net10.0\ImageUploadService.Domain.dll
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Domain\obj\Debug\net10.0\refint\ImageUploadService.Domain.dll
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Domain\obj\Debug\net10.0\ImageUploadService.Domain.pdb
+C:\Users\noels\Projects\image-upload-service\src\ImageUploadService.Domain\obj\Debug\net10.0\ref\ImageUploadService.Domain.dll

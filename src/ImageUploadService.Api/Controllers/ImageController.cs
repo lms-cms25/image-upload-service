@@ -15,9 +15,16 @@ public class ImagesController : ControllerBase
     }
 
     [HttpPost("upload")]
-    public async Task<IActionResult> Upload(IFormFile file)
+    public async Task<IActionResult> Upload(IFormFile file, string userId)
     {
-        var url = await _service.UploadAsync(file);
-        return Ok(new { url });
+        var result = await _service.UploadAsync(file, userId);
+        return Ok(result);
+    }
+
+    [HttpGet("{userId}")]
+    public async Task<IActionResult> GetByUser(string userId)
+    {
+        var images = await _service.GetByUserIdAsync(userId);
+        return Ok(images);
     }
 }
